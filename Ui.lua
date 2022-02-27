@@ -1,4 +1,4 @@
-local EngUi = {}
+local DiscordLib  = {}
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 local RunService = game:GetService("RunService")
@@ -14,10 +14,8 @@ if getgenv().Key == nil or getgenv().id == nil then
     getgenv().id = "FUCKUBITCH"
     getgenv().Key = "FUCKUBITCH"
 end
-if game.CoreGui:FindFirstChild(getgenv().Key .."," .. getgenv().id) then
-   game.CoreGui:FindFirstChild(getgenv().Key .."," .. getgenv().id):Destroy()
-end
-_G.UI_NAME__VNKVUTK = (getgenv().Key .."," .. getgenv().id)
+
+_G.UI_NAME__VNKVUTK = ("Ability Gui")
 pcall(function()
    userinfo = HttpService:JSONDecode(readfile("Radient.txt"));
 end)
@@ -80,7 +78,7 @@ local function MakeDraggable(topbarobject, object)
 end
 
 local RadientPaidSC = Instance.new("ScreenGui")
-RadientPaidSC.Name = getgenv().Key .."," .. getgenv().id
+RadientPaidSC.Name = "Ability Gui"
 RadientPaidSC.Parent = game.CoreGui
 RadientPaidSC.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
@@ -91,7 +89,7 @@ game:GetService("UserInputService").InputBegan:connect(function(inputObject, gam
    end
 end)
 
-function EngUi:Window(text,maincolor)
+function DiscordLib:Window(text,maincolor)
 
    local currentservertoggled = ""
    local minimized = false
@@ -504,7 +502,7 @@ function EngUi:Window(text,maincolor)
       wait(.3)
       SettingsFrame.Visible = false
    end)
-
+    -- EngUi
    CloseSettingsBtn.MouseEnter:Connect(function()
       CloseSettingsBtnCircle.BackgroundColor3 = Color3.fromRGB(72,76,82)
    end)
@@ -1540,7 +1538,7 @@ function EngUi:Window(text,maincolor)
 
    end)
 
-   function EngUi:Notification(titletext, desctext, btntext)
+   function DiscordLib:Notification(titletext, desctext, btntext)
       local NotificationHolderMain = Instance.new("TextButton")
       local Notification = Instance.new("Frame")
       local NotificationCorner = Instance.new("UICorner")
@@ -3263,4 +3261,4 @@ function EngUi:Window(text,maincolor)
    return ServerHold
 end
 
-return EngUi
+return DiscordLib
