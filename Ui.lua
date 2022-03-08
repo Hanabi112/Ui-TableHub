@@ -1,3 +1,4 @@
+_G.Color = Color3.fromRGB(255, 178, 102)
 local DiscordLib  = {}
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
@@ -272,7 +273,7 @@ function DiscordLib:Window(text,maincolor)
    UserTag.Position = UDim2.new(0.230000004, 0, 0.275000013, 0)
    UserTag.Size = UDim2.new(0, 95, 0, 17)
    UserTag.Font = Enum.Font.GothamBold
-   UserTag.TextColor3 = Color3.fromRGB(255, 178, 102)
+   UserTag.TextColor3 = _G.Color
    UserTag.TextSize = 13.000
    UserTag.TextTransparency = 0
    UserTag.TextXAlignment = Enum.TextXAlignment.Left
@@ -1700,7 +1701,7 @@ function DiscordLib:Window(text,maincolor)
       Server.Text = ""
       Server.BackgroundTransparency = 1
       Server.TextTransparency = 1
-      Server.TextColor3 = Color3.fromRGB(255, 178, 102)
+      Server.TextColor3 = _G.Color
       Server.TextSize = 18.000
 
       ServerBtnCorner.CornerRadius = UDim.new(1, 0)
@@ -1781,7 +1782,7 @@ function DiscordLib:Window(text,maincolor)
       ServerTitle.Size = UDim2.new(0, 97, 0, 39)
       ServerTitle.Font = Enum.Font.GothamSemibold
       ServerTitle.Text = text
-      ServerTitle.TextColor3 = Color3.fromRGB(255, 178, 102)
+      ServerTitle.TextColor3 = _G.Color
       ServerTitle.TextSize = 15.000
       ServerTitle.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -2333,7 +2334,7 @@ function DiscordLib:Window(text,maincolor)
 
             SliderTitle.Name = "SliderTitle"
             SliderTitle.Parent = Slider
-            SliderTitle.BackgroundColor3 = Color3.fromRGB(255, 178, 102)
+            SliderTitle.BackgroundColor3 = _G.Color
             SliderTitle.BackgroundTransparency = 1.000
             SliderTitle.Position = UDim2.new(0, 5, 0, -4)
             SliderTitle.Size = UDim2.new(0, 200, 0, 27)
@@ -2643,7 +2644,7 @@ function DiscordLib:Window(text,maincolor)
             DropItemHolder.CanvasSize = UDim2.new(0, 0, 0, 0)
             DropItemHolder.ScrollBarThickness = 4
             DropItemHolder.BorderSizePixel = 0
-            DropItemHolder.ScrollBarImageColor3 = Color3.fromRGB(255, 178, 102)
+            DropItemHolder.ScrollBarImageColor3 = _G.Color
 
             DropItemHolderLayout.Name = "ItemHolderLayout"
             DropItemHolderLayout.Parent = DropItemHolder
