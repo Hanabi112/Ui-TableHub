@@ -1,4 +1,3 @@
-_G.Color = Color3.fromRGB(255, 178, 102)
 local DiscordLib  = {}
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
