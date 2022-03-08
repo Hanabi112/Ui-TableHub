@@ -1,3 +1,6 @@
+if game.CoreGui:FindFirstChild("Ability Gui") then
+    game.CoreGui:FindFirstChild("Ability Gui"):Destroy()
+ end
 local DiscordLib  = {}
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
