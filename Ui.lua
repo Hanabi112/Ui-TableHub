@@ -1665,7 +1665,7 @@ function DiscordLib:Window(text,maincolor)
          TweenService:Create(
             AlrightBtn,
             TweenInfo.new(.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-            {BackgroundColor3 = Color3.fromRGB(255, 178, 102)}
+            {BackgroundColor3 = Color3.fromRGB(255, 255, 255)}
          ):Play()
       end)
 
@@ -2935,7 +2935,7 @@ function DiscordLib:Window(text,maincolor)
                ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 0, 4)),
                ColorSequenceKeypoint.new(0.20, Color3.fromRGB(234, 255, 0)),
                ColorSequenceKeypoint.new(0.40, Color3.fromRGB(21, 255, 0)),
-               ColorSequenceKeypoint.new(0.60, Color3.fromRGB(255, 178, 102)),
+               ColorSequenceKeypoint.new(0.60, Color3.fromRGB(255, 255, 255)),
                ColorSequenceKeypoint.new(0.80, Color3.fromRGB(0, 17, 255)),
                ColorSequenceKeypoint.new(0.90, Color3.fromRGB(255, 0, 251)),
                ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 0, 4))
