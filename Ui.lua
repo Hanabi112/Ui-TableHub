@@ -85,7 +85,7 @@ RadientPaidSC.Name = "Ability Gui"
 RadientPaidSC.Parent = game.CoreGui
 RadientPaidSC.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-if game:GetService("CoreGui")["Toggle Ability"] then
+if game.CoreGui:FindFirstChild("Toggle Ability") then
     game:GetService("CoreGui")["Toggle Ability"]:Destroy()
 end
 local ToggleAbility = Instance.new("ScreenGui")
