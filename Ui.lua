@@ -1,5 +1,5 @@
 if game.CoreGui:FindFirstChild("Ability Gui") then
-    game.CoreGui:FindFirstChild("Ability Gui"):Destroy()
+    game:GetService("CoreGui")["Ability Gui"]:Destroy()
  end
 local DiscordLib  = {}
 local UserInputService = game:GetService("UserInputService")
@@ -84,6 +84,35 @@ local RadientPaidSC = Instance.new("ScreenGui")
 RadientPaidSC.Name = "Ability Gui"
 RadientPaidSC.Parent = game.CoreGui
 RadientPaidSC.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+if game:GetService("CoreGui")["Toggle Ability"] then
+    game:GetService("CoreGui")["Toggle Ability"]:Destroy()
+end
+local ToggleAbility = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local toggleAbility = Instance.new("TextButton")
+ToggleAbility.Name = "Toggle Ability"
+ToggleAbility.Parent = game.CoreGui
+ToggleAbility.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ToggleAbility
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.Position = UDim2.new(0.135155663, 0, 0.20784314, 0)
+Frame.Size = UDim2.new(0, 100, 0, 44)
+
+toggleAbility.Name = "toggle Ability"
+toggleAbility.Parent = Frame
+toggleAbility.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+toggleAbility.Position = UDim2.new(-1.52587887e-07, 0, 0, 0)
+toggleAbility.Size = UDim2.new(0, 100, 0, 44)
+toggleAbility.Text = "Toggle Gui"
+toggleAbility.TextColor3 = Color3.fromRGB(255, 0, 0)
+toggleAbility.TextScaled = true
+toggleAbility.TextSize = 14.000
+toggleAbility.TextWrapped = true
+toggleAbility.MouseButton1Click:Connect(function()
+    game.CoreGui:FindFirstChild("Ability Gui").Enabled = not game.CoreGui:FindFirstChild("Ability Gui").Enabled
+end)
 
 game:GetService("UserInputService").InputBegan:connect(function(inputObject, gameProcessedEvent)
    if inputObject.KeyCode == Enum.KeyCode.RightControl then
