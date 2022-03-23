@@ -86,34 +86,34 @@ RadientPaidSC.Parent = game.CoreGui
 RadientPaidSC.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 if game.CoreGui:FindFirstChild("Toggle Ability") then
-    game:GetService("CoreGui")["Toggle Ability"]:Destroy()
+	game:GetService("CoreGui")["Toggle Ability"]:Destroy()
 end
-local ToggleAbility = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
-local toggleAbility = Instance.new("TextButton")
-ToggleAbility.Name = "Toggle Ability"
-ToggleAbility.Parent = game.CoreGui
-ToggleAbility.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+local ToggleGui = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local AbilityHub = Instance.new("ImageButton")
 
-Frame.Parent = ToggleAbility
-Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame.Position = UDim2.new(0.135155663, 0, 0.20784314, 0)
-Frame.Size = UDim2.new(0, 100, 0, 44)
 
-toggleAbility.Name = "toggle Ability"
-toggleAbility.Parent = Frame
-toggleAbility.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-toggleAbility.Position = UDim2.new(-1.52587887e-07, 0, 0, 0)
-toggleAbility.Size = UDim2.new(0, 100, 0, 44)
-toggleAbility.Text = "Toggle Gui"
-toggleAbility.TextColor3 = Color3.fromRGB(255, 0, 0)
-toggleAbility.TextScaled = true
-toggleAbility.TextSize = 14.000
-toggleAbility.TextWrapped = true
-toggleAbility.MouseButton1Click:Connect(function()
-    game.CoreGui:FindFirstChild("Ability Gui").Enabled = not game.CoreGui:FindFirstChild("Ability Gui").Enabled
+ToggleGui.Name = "Toggle Ability"
+ToggleGui.Parent = game.CoreGui
+ToggleGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+MainFrame.Name = "Main Frame"
+MainFrame.Parent = ToggleGui
+MainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainFrame.BackgroundTransparency = 1.000
+MainFrame.Position = UDim2.new(0.0809560493, 0, 0.174233124, 0)
+MainFrame.Size = UDim2.new(0.0925212055, 0, 0.147239268, 0)
+
+AbilityHub.Name = "Ability Hub"
+AbilityHub.Parent = MainFrame
+AbilityHub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AbilityHub.BackgroundTransparency = 1.000
+AbilityHub.Size = UDim2.new(1, 0, 1, 0)
+AbilityHub.Image = "rbxassetid://8957234733"
+AbilityHub.ScaleType = Enum.ScaleType.Fit
+AbilityHub.MouseButton1Click:Connect(function()
+	game.CoreGui:FindFirstChild("Ability Gui").Enabled = not game.CoreGui:FindFirstChild("Ability Gui").Enabled
 end)
-
 game:GetService("UserInputService").InputBegan:connect(function(inputObject, gameProcessedEvent)
    if inputObject.KeyCode == Enum.KeyCode.RightControl then
       wait()
