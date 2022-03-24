@@ -85,35 +85,6 @@ RadientPaidSC.Name = "Ability Gui"
 RadientPaidSC.Parent = game.CoreGui
 RadientPaidSC.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-if game.CoreGui:FindFirstChild("Toggle Ability") then
-	game:GetService("CoreGui")["Toggle Ability"]:Destroy()
-end
-local ToggleGui = Instance.new("ScreenGui")
-local MainFrame = Instance.new("Frame")
-local AbilityHub = Instance.new("ImageButton")
-
-
-ToggleGui.Name = "Toggle Ability"
-ToggleGui.Parent = game.CoreGui
-ToggleGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-MainFrame.Name = "Main Frame"
-MainFrame.Parent = ToggleGui
-MainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-MainFrame.BackgroundTransparency = 1.000
-MainFrame.Position = UDim2.new(0.0809560493, 0, 0.174233124, 0)
-MainFrame.Size = UDim2.new(0.0925212055, 0, 0.147239268, 0)
-
-AbilityHub.Name = "Ability Hub"
-AbilityHub.Parent = MainFrame
-AbilityHub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-AbilityHub.BackgroundTransparency = 1.000
-AbilityHub.Size = UDim2.new(1, 0, 1, 0)
-AbilityHub.Image = "rbxassetid://8957234733"
-AbilityHub.ScaleType = Enum.ScaleType.Fit
-AbilityHub.MouseButton1Click:Connect(function()
-	game.CoreGui:FindFirstChild("Ability Gui").Enabled = not game.CoreGui:FindFirstChild("Ability Gui").Enabled
-end)
 game:GetService("UserInputService").InputBegan:connect(function(inputObject, gameProcessedEvent)
    if inputObject.KeyCode == Enum.KeyCode.RightControl then
       wait()
